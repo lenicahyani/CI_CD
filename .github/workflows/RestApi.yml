@@ -3,7 +3,9 @@ on:
   push:
     branches: [ master ]
 jobs:
-  test:
+  test: 
+  steps:
+    runs-on: ubuntu-latest
     - uses: actions/checkout@v3
     - name: Run JMeter Tests
       uses: rbhadti94/apache-jmeter-action@v0.5.0

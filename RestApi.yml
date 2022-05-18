@@ -4,12 +4,19 @@ on:
     branches: [ master ]
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo Hello, world! Multiline.
-          echo Hello, world! Multiline again.
+    - uses: actions/checkout@v3
+    - name: Run JMeter Tests
+      uses: rbhadti94/apache-jmeter-action@v0.5.0
+      with: 
+        testFilePath: Altashop.jmx
+        outputReportsFolder: workflows/
+#   test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Run a one-line script
+#         run: echo Hello, world!
+#       - name: Run a multi-line script
+#         run: |
+#           echo Hello, world! Multiline.
+#           echo Hello, world! Multiline again.

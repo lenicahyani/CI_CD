@@ -11,7 +11,7 @@ jobs:
       uses: rbhadti94/apache-jmeter-action@v0.5.0
       with: 
         testFilePath: Altashop.jmx
-        outputReportsFolder: workflows/
+        outputReportsFolder: .github/workflows/
 #   test:
 #     runs-on: ubuntu-latest
 #     steps:
